@@ -45,8 +45,12 @@ namespace CardsClassLibrary
                     return -1;
             return 0;
         }
-        public string GetInfo() { 
-            return $"{ Value } of { Suit }";
+        public string Name {
+            get { return $"{Value} of {Suit}"; }
+        }
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

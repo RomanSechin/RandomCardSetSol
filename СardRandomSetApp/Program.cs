@@ -66,7 +66,7 @@ namespace СardRandomSetApp
         }
         static void PrintCards() {
             foreach (Card card in cards) {
-                Console.WriteLine(card.GetInfo());
+                Console.WriteLine(card.ToString());
             }
         }
     }
