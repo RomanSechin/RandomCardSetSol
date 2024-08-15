@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CardsClassLibrary
+{
+    public enum Suit { 
+        Diamonds1,
+        Clubs2,
+        Hearts3,
+        Spades4
+    }
+    public enum Value { 
+        Two,
+        Three,
+        Four,
+        Five,
+        Six,
+        Seven,
+        Eight,
+        Nine,
+        Ten,
+        Jack,
+        Queen,
+        King,
+        Ace,
+        Jocker
+    }
+    public class Card : IComparable<Card>
+    {
+        public Suit Suit {  get; set; }
+        public Value Value { get; set; }
+        public int CompareTo(Card other)
+        {
+            if (this.Value > other.Value)
+                return 1;
+            else if (this.Value < other.Value)
+                return -1;
+            else
+                if (this.Suit > other.Suit)
+                return 1;
+                else if (this.Suit < other.Suit)
+                    return -1;
+            return 0;
+        }
+        public string GetInfo() { 
+            return $"{ Value } of { Suit }";
+        }
+    }
+}
