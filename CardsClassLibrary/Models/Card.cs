@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CardsClassLibrary
 {
-    public enum Suit { 
+    public enum Suit
+    {
         Diamonds,
         Clubs,
         Hearts,
         Spades
     }
-    public enum Value { 
+    public enum Value
+    {
         Two,
         Three,
         Four,
@@ -30,7 +28,7 @@ namespace CardsClassLibrary
     }
     public class Card : IComparable<Card>
     {
-        public Suit Suit {  get; set; }
+        public Suit Suit { get; set; }
         public Value Value { get; set; }
         public int CompareTo(Card other)
         {
@@ -41,11 +39,12 @@ namespace CardsClassLibrary
             else
                 if (this.Suit > other.Suit)
                 return 1;
-                else if (this.Suit < other.Suit)
-                    return -1;
+            else if (this.Suit < other.Suit)
+                return -1;
             return 0;
         }
-        public string Name {
+        public string Name
+        {
             get { return $"{Value} of {Suit}"; }
         }
         public override string ToString()

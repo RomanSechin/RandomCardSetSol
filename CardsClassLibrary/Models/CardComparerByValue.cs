@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CardsClassLibrary.Models
 {
@@ -10,9 +6,9 @@ namespace CardsClassLibrary.Models
     {
         public int Compare(Card x, Card y)
         {
-            if(x.Value < y.Value) 
+            if (x.Value < y.Value)
                 return -1;
-            else if(x.Value > y.Value)
+            else if (x.Value > y.Value)
                 return 1;
             return 0;
         }
