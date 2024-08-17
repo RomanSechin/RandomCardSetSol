@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace CardsClassLibrary
 {
     public enum Suit { 
-        Diamonds1,
-        Clubs2,
-        Hearts3,
-        Spades4
+        Diamonds,
+        Clubs,
+        Hearts,
+        Spades
     }
     public enum Value { 
         Two,
