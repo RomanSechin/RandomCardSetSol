@@ -2,30 +2,6 @@
 
 namespace CardsClassLibrary
 {
-    public enum Suit
-    {
-        Diamonds,
-        Clubs,
-        Hearts,
-        Spades
-    }
-    public enum Value
-    {
-        Two,
-        Three,
-        Four,
-        Five,
-        Six,
-        Seven,
-        Eight,
-        Nine,
-        Ten,
-        Jack,
-        Queen,
-        King,
-        Ace,
-        Jocker
-    }
     public class Card : IComparable<Card>
     {
         public Suit Suit { get; set; }
